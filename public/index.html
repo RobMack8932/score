@@ -3,12 +3,82 @@
   <head lang="en">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Score</title>
+    <title>Scoreboard</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/screen.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1 class="hello-world"></h1>
+    <header>
+      <h1>My Score Board</h1>
+    </header>
+    <main>
+      <section class="team1">
+        <h2>Team 1</h2>
+        <h3>0</h3>
+        <fieldset>
+          <input type="text" placeholder="Name" />
+        </fieldset>
+
+        <fieldset>
+          <p class="blink"></p>
+          <i
+            id="d"
+            class="add fas fa-2x fa-plus-circle"
+            onclick="addTeam1Score()"
+          ></i>
+          <i
+            id="e"
+            class="subtract fas fa-2x fa-minus-circle"
+            onclick="subtractTeam1Score()"
+          ></i>
+          <div>
+            <input
+              type="button"
+              id="resetButton"
+              class="article"
+              onclick="resetTeam1()"
+              value="Reset"
+            />
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="team2">
+        <h2>Team 2</h2>
+        <h3>0</h3>
+        <fieldset>
+          <input type="text" placeholder="Name" />
+        </fieldset>
+
+        <fieldset>
+          <p class="blink"></p>
+          <i
+            id="a"
+            class="add fas fa-2x fa-plus-circle"
+            onclick="addTeam2Score()"
+          ></i>
+          <i
+            id="b"
+            class="subtract fas fa-2x fa-minus-circle"
+            onclick="subtractTeam2Score()"
+          ></i>
+          <div>
+            <input
+              type="button"
+              id="resetButton2"
+              class="article"
+              onclick="resetTeam2() "
+              value="Reset"
+            />
+          </div>
+        </fieldset>
+      </section>
+    </main>
+
     <script src="/main.js" charset="utf-8"></script>
   </body>
 </html>
